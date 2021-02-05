@@ -1,0 +1,5 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z_-]*)$ alumno.php?solicitud=$1

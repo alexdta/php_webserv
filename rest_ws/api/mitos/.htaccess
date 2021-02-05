@@ -1,0 +1,15 @@
+#Options +FollowSymLinks -MultiViews
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+RewriteRule ^([^/]+)$ mitos_bd.php?peticion=$1 [L]
+# /lista => muestra todos
+
+
+RewriteRule ^([^/]+)/([^/]+)$ mitos_bd.php?peticion=$1&mito=$2 [L]
+# /detalle/fenix => muestra los datos de un mito especifico (fenix)
+

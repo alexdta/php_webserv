@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumir WebServices Rest</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form method="post" id="frmAgregar" name="frmAgregar" action="#">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="mito" class="form-label">Mito:</label>
+                        <input type="text" id="mito" name="mito" class="form-control" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="descripcion" class="form-label">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion" class="form-control" required />
+                    </div>
+                </div>
+                <button id="guardar" name="guardar" type="submit" class="btn btn-primary">Guardar</button> 
+                <!-- <input class="btn btn-primary" type="submit" value="Guardar" /> -->
+            </form>
+        </div>
+        <hr>
+        <div class="row">
+            <table class="table" id="tblMitos" name="tblMitos">
+                <thead>
+                    <tr>
+                        <th>Mito</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/ajax_ws.js"></script>
+</body>
+
+</html>
